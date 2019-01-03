@@ -16,10 +16,10 @@ import java.util.Locale;
 
 import timber.log.Timber;
 
-public class LoggerUtil {
+public class FileLogger {
 
 
-    private LoggerUtil() {
+    private FileLogger() {
         throw new RuntimeException();
     }
 
@@ -35,7 +35,7 @@ public class LoggerUtil {
 
             @Override
             public boolean isLoggable(int priority, @Nullable String tag) {
-                return LoggerUtil.isLoggable(priority, logLevel);
+                return FileLogger.isLoggable(priority, logLevel);
             }
 
         });
@@ -56,7 +56,7 @@ public class LoggerUtil {
 
         @Override
         protected void log(int priority, String tag, @NonNull String message, Throwable t) {
-            if (LoggerUtil.isLoggable(priority, logLevel)) {
+            if (FileLogger.isLoggable(priority, logLevel)) {
                 Logger.log(priority, tag, message, t);
             }
         }
