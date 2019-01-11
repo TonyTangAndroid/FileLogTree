@@ -3,8 +3,6 @@ package io.github.android.tang.tony.file.logger.sample;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.orhanobut.logger.Logger;
-
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,8 +14,5 @@ public class MainActivity extends AppCompatActivity {
         Timber.d("This is a Timber debug log that will be saved into disk log file.");
         Timber.e("This is an Timber error log that will be saved into disk log file.");
         Timber.v("This is an Timber verbose log that will NOT be saved into disk log file.");
-        Logger.d("this is an Orhanobut log that will be saved into disk log file.");
-        Logger.v("this is a verbose log that will NOT be saved into disk log file.");
-
     }
 }
